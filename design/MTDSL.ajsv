@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--AgileJ Ltd. (http://www.agilej.com)-->
+<ajsv>
+    <diagram style="allMembersSmallest" version="1.7.4.v20110506-1155">
+        <class className="au.rmit.ract.planning.pathplanning.ai.AStarPlanner" project="RACT-PATH-PLANNING-LIBRARY" xLocation="2785" yLocation="964"/>
+        <class className="au.rmit.ract.planning.pathplanning.ai.MovingTargetDStarLitePlanner" project="RACT-PATH-PLANNING-LIBRARY" xLocation="4281" yLocation="965"/>
+        <class className="au.rmit.ract.planning.pathplanning.ai.PathPlanner" project="RACT-PATH-PLANNING-LIBRARY" xLocation="3626" yLocation="685"/>
+        <class className="au.rmit.ract.planning.pathplanning.entity.ComputedPath" project="RACT-PATH-PLANNING-LIBRARY" xLocation="3719" yLocation="1279"/>
+        <class className="au.rmit.ract.planning.pathplanning.entity.Path" project="RACT-PATH-PLANNING-LIBRARY" xLocation="3759" yLocation="940"/>
+    </diagram>
+</ajsv>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--AgileJ Ltd. (http://www.agilej.com)-->
+<ajsv>
+    <diagram style="allTypesGray" version="1.7.4.v20110506-1155">
+        <class className="au.rmit.ract.planning.pathplanning.PathPlannerType" project="RACT-PATH-PLANNING-LIBRARY" xLocation="310" yLocation="-125"/>
+        <class className="au.rmit.ract.planning.pathplanning.PathPlannerFactory" project="RACT-PATH-PLANNING-LIBRARY" xLocation="1030" yLocation="-87"/>
+        <class className="au.rmit.ract.planning.pathplanning.ai.PathPlanner" project="RACT-PATH-PLANNING-LIBRARY" xLocation="1030" yLocation="197"/>
+        <class className="au.rmit.ract.planning.pathplanning.ai.heuristics.Heuristics" project="RACT-PATH-PLANNING-LIBRARY" xLocation="760" yLocation="313"/>
+        <class className="au.rmit.ract.planning.pathplanning.ai.heuristics.HeuristicsType" project="RACT-PATH-PLANNING-LIBRARY" xLocation="227" yLocation="312"/>
+        <class className="au.rmit.ract.planning.pathplanning.ai.heuristics.DistanceHeuristics" project="RACT-PATH-PLANNING-LIBRARY" xLocation="1319" yLocation="458"/>
+        <class className="au.rmit.ract.planning.pathplanning.entity.Node" project="RACT-PATH-PLANNING-LIBRARY" xLocation="671" yLocation="896"/>
+        <class className="au.rmit.ract.planning.pathplanning.entity.Edge" project="RACT-PATH-PLANNING-LIBRARY" xLocation="466" yLocation="611"/>
+        <class className="au.rmit.ract.planning.pathplanning.entity.SearchDomain" project="RACT-PATH-PLANNING-LIBRARY" xLocation="1319" yLocation="673"/>
+        <class className="au.rmit.ract.planning.pathplanning.entity.Path" project="RACT-PATH-PLANNING-LIBRARY" xLocation="796" yLocation="505"/>
+        <class className="au.rmit.ract.planning.pathplanning.entity.SearchNode" project="RACT-PATH-PLANNING-LIBRARY" xLocation="1104" yLocation="1077"/>
+    </diagram>
+</ajsv>

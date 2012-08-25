@@ -1,0 +1,33 @@
+Webpage Content:
+----------------
+
+1. About
+Apparate is an application to visualise and learn about various path planning algorithms ranging 
+from the most popular A* to various extensions of A* for both incremental and real-time search. 
+Incremental search algorithms try to solve a series of similar path-planning problems by reusing 
+information generated during the previous iterations of search. However, real-time algorithms try 
+to search and return a part of optimal path in real time. To gain a deeper understanding of this 
+area and the algorithms, please read the papers from the Related Papers section.
+
+Apparate uses the JPathPlan: A library of path planning algorithms, which was built as a part of
+minor thesis entitled "Path Planning in Agents with Incomplete Information in Dynamic 
+Environments" <- href to thesis. This library provides a domain-independent implementation of path
+planning algorithms and also provides in interface to implement new algorithms in the same manner.
+
+
+2. Downloads
+Apparate can be either downloaded or run as an applet. The downloadable archive file contains a 
+README and a HOW-TO file which contain instructions on how to install and use the application. It 
+also contains a HOW-TO file for the JPathPlan library which has instructions on how the library can 
+be used in other client applications.
+
+
+3. Research Paper References
+generate using bib2html
+
+4. Feedback/Comments/Bug Reports
+Please contact Abhijeet Anand (abhijeet [dot] anand [at] rmit [dot] edu [dot] au) or Sebastian 
+Sardina (sebastian  [dot] sardina [at] rmit [dot] edu [dot] au) for providing any feedback or 
+asking any queries you may have. You can also use the following link to report any bugs that you 
+may find.
+
