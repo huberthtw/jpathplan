@@ -62,6 +62,20 @@ public abstract class Plan {
      */
     public abstract int getLength();
     
+    
+    /**
+     * @return The the current step number in the plan
+     */
+    public abstract int getCurrentStepNo();
+    
+    /**
+     * Set the current step.
+     * 
+     * @param id
+     * @return step number to set.
+     */
+    public abstract void setCurrentStep(int id);
+
     /**
      * Return the Node corressponding to the specified step in the path.
      * 

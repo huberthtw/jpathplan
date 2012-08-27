@@ -83,22 +83,47 @@ public class ComputedPlan extends Plan {
         return waypoints.size();
     }
     
+
+    /**
+     * Get the current index in the plan
+     * 
+     * @return current index in the plan
+     */
+    @Override
+    public int getCurrentStepNo() {
+        return currentIndex;
+    }
+
     /*
      * (non-Javadoc)
      * @see au.rmit.ract.planning.pathplanning.entity.Path#getNextStep()
      */
     @Override
     public State getNextStep() {
-        return waypoints.get(currentIndex++);
+//        return waypoints.get(currentIndex++);
+
+         if (getLength() > currentIndex)
+            return waypoints.get(currentIndex++);
+        else
+            return null;
+         
     }
-    
+
+    /*
+     * (non-Javadoc)
+     * @see au.rmit.ract.planning.pathplanning.entity.Path#getStep(int)
+     */
+    @Override
+    public void setCurrentStep(int id) {
+        currentIndex = id;
+    }
+
     /*
      * (non-Javadoc)
      * @see au.rmit.ract.planning.pathplanning.entity.Path#getStep(int)
      */
     @Override
     public State getStep(int id) {
-        currentIndex = id + 1;
         return waypoints.get(id);
     }
     
