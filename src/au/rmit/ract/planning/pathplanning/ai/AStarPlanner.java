@@ -62,6 +62,9 @@ public class AStarPlanner implements PathPlanner {
     private static final int          H                      = /* "h" */2;
     private static final float        DEF_H                  = 0;
     
+    private float Weight = 1;   // current weight of WA*
+    
+    
     /*
      * =======================================================================*
      * ----------------------------- INNER CLASS -----------------------------*
@@ -73,14 +76,12 @@ public class AStarPlanner implements PathPlanner {
      * ----------------------------- CONSTRUCTORS ----------------------------*
      * =======================================================================*
      */
-    
+
+
     /**
-     * Creates an A-Star Path Planner based on a default heuristic, Manhattan
-     * Distance heuristics, which assumes that the search domain is a
-     * two-dimensional grid world, having made no assumptions about the
-     * connectedness.
+     * Creates an Weighted A-Star Path Planner based on a heuristic and a weight
      */
-    public AStarPlanner(DistanceHeuristics h) {
+    public AStarPlanner(DistanceHeuristics h, float Weight) {
         m_openList = new PriorityQueue<SearchNode>(11,
                 new Comparator<SearchNode>() {
                     
@@ -104,10 +105,28 @@ public class AStarPlanner implements PathPlanner {
                         throw new NullPointerException();
                     }
                 });
+        
         m_closedListHashMap = new HashMap<State, SearchNode>(BUCKET_SIZE);
         m_allSNodesListHashMap = new HashMap<State, SearchNode>(BUCKET_SIZE);
         m_expandedNodes = new ArrayList<State>();
         m_heuristics = h;
+        
+        this.Weight = Weight;
+    }
+
+    /**
+     * Creates a classical A-Star Path Planner based on a heuristic
+     */
+    public AStarPlanner(DistanceHeuristics h) {
+        this(h, 1F);
+    }
+    
+    public void setWeight(float Weight) {
+        this.Weight = Weight;
+    }
+    
+    public float getWeight() {
+        return this.Weight;
     }
     
     /*
@@ -210,7 +229,7 @@ public class AStarPlanner implements PathPlanner {
                     // Process the node
                     neighbourSNode.set(G, nextStepG);
                     neighbourSNode.set(H, m_heuristics.h(map, neighbourNode, tNode));
-                    neighbourSNode.set(F, nextStepG + neighbourSNode.get(H));
+                    neighbourSNode.set(F, nextStepG + Weight*neighbourSNode.get(H));
                     // if (neighbourSNode.get(F) != Float.POSITIVE_INFINITY) {
                     neighbourSNode.setParent(currentSNode);
                     // }
