@@ -23,6 +23,8 @@ package au.rmit.ract.planning.pathplanning.entity;
 
 import java.util.ArrayList;
 
+import au.rmit.ract.planning.pathplanning.interfaces.NodeIterator;
+
 /**
  * A SearchDomain interface represents the search space graph as an abstract view
  * of the environment/domain. This interface defines the basic requirements for the client
@@ -71,6 +73,8 @@ public abstract class SearchDomain {
      * @return An ArrayList of Nodes, which contains the successors of the current node.
      */
     public abstract <T extends State> ArrayList<T> getSuccessors(State cNode);
+    
+    public abstract NodeIterator getNextSuccessor(State cNode);
     
     /**
      * Returns the predecessor nodes/states of the current node.

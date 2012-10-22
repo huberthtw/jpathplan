@@ -1,4 +1,5 @@
 au.rmit.ract.planning.pathplanning.ai
 au.rmit.ract.planning.pathplanning.ai.heuristics
 au.rmit.ract.planning.pathplanning.entity
+au.rmit.ract.planning.pathplanning.interfaces
 au.rmit.ract.util
